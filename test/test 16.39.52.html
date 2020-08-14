@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>nur</title>
+	<link href="styl.css" rel="stylesheet" type="text/css "/>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.parallax-img{
+			height: 100vh;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+		.parallax-img:nth-child(1){
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS5e-FKuCfkG88YBczNpv7KOdkoprsqdTccpdk97ihuGQvHPqVN&usqp=CAU);
+		}
+		.parallax-img:nth-child(2){
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS16wpFhAz1MPO9WUeeCyEVoV4atZWA56vLTTJWkfbaFFc5PcnS&usqp=CAU);
+		}
+		.parallax-img:nth-child(3){
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQzezoVTLIEPtbIFwF9TFbjG_Wucy3Z_mo_ip-xp9G5zEXumYP&usqp=CAU);
+		}
+		.parallax-img:nth-child(4){
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQb9oIAUCD3EyZuZUqiDAj_xrosamVINXL6njD8-Ln7obZgJIkv&usqp=CAU);
+		}
+		.parallax-img:nth-child(5){
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQowBCthKvgKPnY5dkhaArBUnaLD_zWJSKOpuaysO41TOKXomgZ&usqp=CAU);
+		}
+		.header{
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 72px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="parallax">
+		<div class="parallax-img"></div>
+		<div class="parallax-img"></div>
+		<div class="parallax-img"></div>
+		<div class="parallax-img"></div>
+		<div class="parallax-img"></div>
+	</div>
+</body>
+</html>

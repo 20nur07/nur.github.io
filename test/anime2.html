@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>anime.01</title>
+	<link rel="stylesheet" type="text/css" href="anime1.css">
+	<link rel="stylesheet" type="text/css" href="https://fontawesome.com/icons/search?style=solid">
+	<script src="https://kit.fontawesome.com/3fee2b7069.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="anime1.js"></script>
+	<style type="text/css">
+		html{
+	box-sizing: border-box;
+}
+*, *:after, *:before{
+	box-sizing: inherit;
+}
+body{
+	margin: 0;
+	padding: 10px;
+}
+.preloader{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index:2; 
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+}
+.loader{
+    width: 75px;
+    height: 75px;
+    border: 10px solid white;
+    border-radius: 50%;
+    border-top-color: blue;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: 2s spin infinite linear;
+  
+  }
+.done{
+  opacity: 0;
+  visibility: hidden;
+}
+@keyframes spin {
+  from{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to{
+    transform: translate(-50%, -50%) 
+  rotate(360deg);
+  }
+}
+.index{
+	font-size: 23px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-decoration: none;
+	display: block;
+	color: black;
+	display: block;
+}
+.index:hover{
+	color: red;
+	transition: 0.2s all ease;
+	border-radius: 10PX;
+}
+nav{
+	display: flex;
+	justify-content: center;
+}
+.menu{
+	background-color: #f0f0f0;
+	position: fixed;
+	width: 98.4%;
+	border-radius: 10px;
+	border: 2px solid black;
+	justify-content: center;
+}
+#menu-icon{
+	margin-right: 3px;
+}
+
+ul{
+	display: flex;
+	list-style: none;
+}
+.top-menu li:hover{
+	background-color: #b9c0c9;
+}
+.menu > ul li a{
+ display: block;
+ font-size: 20px;
+ color: #454547;
+}
+
+.menu li ul{
+ position: absolute;
+ display: none;
+}
+.menu li > ul li{
+	background-color:  #bfbcb2;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+.submenu1{
+	width: 197px;
+	left:198px;
+	display: flex;
+	list-style: none;
+}
+.submenu2{
+	width: 183px;
+	left: 617px;
+	display: flex;
+	list-style: none;
+}
+.submenu3{
+	width: 172px;
+	left:884.5px;
+	display: flex;
+	list-style: none;
+}
+.menu li > ul li:first-child{
+	border-top: 2px solid black;
+}
+.menu li > ul li a{
+	 color: black;
+	 text-decoration: none;
+	 font-size: 23px;
+	 margin-top: 10px;
+}
+.menu li > ul li ul{
+	 position: absolute;
+}
+.menu li:hover > ul{
+	  display: block;
+	  text-align: center;
+}
+.div-content-anime{
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 10px;
+	background-color:#f0f0f0;
+	height: auto;
+	font-size: 22px;
+	border: 2px solid black;
+}
+.div-anime{
+	margin-top: 0px;
+	display: flex;
+	margin-right: 10px;
+	top: -100px;
+}
+.div-anime1{
+	margin-top: 80px;
+	display: flex;
+	margin-right: 10px;
+	top: -100px;
+}
+.button{
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
+	border: 2px solid black;
+	width: 100px;
+	background-color: #6666;
+}
+.img-anime{	
+	width: 200px;
+	margin-top: 10px;
+	border-radius: 20px;
+	border: 2px solid black;
+	margin-left: 10px;
+}
+.content-anime-meant{
+	width: 100%;
+	background-color: #f0f0f0;
+	padding: 10px;
+	margin-top: 10px;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+.as{
+	text-decoration: none;
+	color: black;
+}
+.as:hover{
+	text-decoration: underline;
+}
+#more1{
+	display: none;
+}
+#more2{
+	display: none;
+}
+#more3{
+	display: none;
+}
+#more4{
+	display: none;
+}
+#more5{
+	display: none;
+}
+#more6{
+	display: none;
+}
+#more7{
+	display: none;
+}
+#more8{
+	display: none;
+}
+#more9{
+	display: none;
+}
+#more10{
+	display: none;
+}
+#more11{
+	display: none;
+}
+#more12{
+	display: none;
+}
+#more13{
+	display: none;
+}
+#more14{
+	display: none;
+}
+#more15{
+	display: none;
+}
+	</style>
+</head>
+	<body>
+		<!-- <div id="page" class="preloader">
+  <div class="loader"></div>
+</div> -->
+		<header>
+			<div class="menu">
+		    	<nav class="top-menu">
+		    		<ul>
+		    			<li><a class="index" href="#"><i id="menu-icon" class="fab fa-instagram"></i>Instagram</a>
+		    				<ul class="submenu1">
+		    					<li><a target="_blank" href="https://www.instagram.com/20_n.u.r.i.k_07/?hl=ru">Основной</a></li>
+		    					<li><a href="">Хороший</a></li>
+		    				</ul>
+		    			</li>
+						<li><a class="index" target="_blank" href="#"><i id="menu-icon" class="fas fa-address-card"></i>About</a></li>
+						<li><a class="index" target="_blank" href="#"><i id="menu-icon" class="far fa-address-book"></i>Contacs</a></li>
+						<li><a class="index" target="_blank" href="file:///Users/nurkyzatanbekova/Desktop/моя%20первая%20страничка/shop.html#atack"><i id="menu-icon" class="fab fa-product-hunt"></i>Produce</a>
+							<ul class="submenu2">
+								<li><a href="#">Одежды</a></li>
+								<li><a href="#">Красовки</a></li>
+								<li><a href="#">Футболки</a></li>
+								<li><a href="#">Сувениры</a></li>
+							</ul>
+						</li>
+						<li><a class="index" target="_blank" href="file:///Users/nurkyzatanbekova/Desktop/html%20css%20js/galarea.html" target="_blank"><i id="menu-icon" class="fab fa-envira"></i>Galary</a></li>
+						<li><a class="index" target="_blank" href="https://jut.su/anime/"><i id="menu-icon" class="fas fa-video"></i>Anime</a>
+							<ul class="submenu3">
+								<li><a href="#n">Наруто</a></li>
+								<li><a href="#one">Ванпис</a></li>
+								<li><a href="#atack">Атака титанов</a></li>
+								<li><a href="#xan">Хантер х Хантер</a></li>
+								<li><a href="#val">Волейбол</a></li>
+								<li><a href="#stal">Стальной Алхимик</a></li>
+								<li><a href="#master">Мастера меча онлайн</a></li>
+								<li><a href="#gul">Токийский гуль</a></li>
+								<li><a href="#kill">Убийца акаме</a></li>
+								<li><a href="#book">Тетрадь смерти</a></li>
+								<li><a href="#djo">Джо Джо</a></li>
+								<li><a href="#my">Моя геройская академия</a></li>
+								<li><a href="#nice">Милый во Франксе</a></li>
+								<li><a href="#mc">Госпожа Кагуя:</a></li>
+								<li><a href="#city">город в котором меня нет</a></li>
+								<li><a href="#Toradora">Тора Дора</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+			<div>
+				<div id="n" class="div-anime1">
+					<div class="div-content-anime">
+						<p>
+							Наруто:Познакомьтесь с Наруто Узумаки – юным ниндзя, которому предстоит пройти долгий путь к своей мечте. Однако для достижения любой цели нужны верные товарищи, которых Наруто предстоит обрести. Эта история о том, как найти в себе силы не сдаваться, когда никто вокруг не верит в успех. А ещё это исключительная и<span id="dots">...</span> <span id="more">неповторимая в своём роде классика – самое занимательное приключение ниндзя всех времён!</span> 
+						</p>
+						<button id="btn" class="button" onclick="readmore()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/1/11/Naruto-manga.jpg">
+					</div>
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="one" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Ванпис:Бороздящие просторы Гранд-Лайна пираты уже отчаялись найти таинственное сокровище легендарного Короля Пиратов Роджера, сулящие нашедшему их счастливчику роскошную жизнь. Спустя годы для большинства авантюристов мифический клад превратился в красивую легенду, но только не для молодого Монки Д.<span id="dots2">...</span> <span id="more2"> Луффи, который всей душой мечтает найти тайник Роджера, доказав, что достоин зваться новым Королём Пиратов. Единственное, что Луффи ставит выше собственной мечты, так это своих друзей, которые помогают юному капитану на пути к славе.
+							Аниме «One Piece» по праву можно считать классикой сёнена для детей и подростков - все серии которого можно смотреть онлайн, а на приключениях ищущего тот самый Ван Пис Луффи выросло не одно поколение.</span>
+						</p>
+						<button id="btn2" class="button" onclick="readmore2()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/3/3c/OnePiece_1.jpg/275px-OnePiece_1.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://upload.wikimedia.org/wikipedia/ru/thumb/2/2a/Shingeki_no_kyojin_book_9_rus.jpg/272px-Shingeki_no_kyojin_book_9_rus.jpg">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="atack" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Атака титанов:Загнанное в угол человечество доживает свои последние дни под гнётом титанов - таинственных созданий, терроризирующих человеческую расу. Выжившие ютятся за стенами крупного поселения с собственным правительством, представляющим последний оплот централизованной власти в мире. Там же живёт и юноша <span id="dots3">...</span> <span id="more3">по имени Эрен, проводя детство в относительной безопасности, пока не происходит событие из ряда вон: титаны прорываются в город, уничтожая всё на своём пути. После вторжения гигантов Эрен становится сиротой и клянётся уничтожить всех до единого титанов. На пути к своей цели он и его друзья вступают в отряд разведки, занимающийся вылазками за стену. Герой ещё не знает, сколько загадок в себе таит внешний мир.Экранизация манги о приключениях Эрена и его товарищей Shingeki no Kyojin «взорвала» мировое аниме-сообщество в 2013 году и привлекла к себе множество поклонников японской анимации.</span>
+						</p>
+						<button id="btn3" class="button" onclick="readmore3()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/2/2a/Shingeki_no_kyojin_book_9_rus.jpg/272px-Shingeki_no_kyojin_book_9_rus.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="xan" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Хантер х Хантер:Профессия Охотника опасна и трудна, а перечень поручений крайне широк - от убийства чудовищ до поисков клада. Тем не менее, многие авантюристы пускаются во все тяжкие в погоне за мечтой стать прославленным Охотником. Об этом задумывается и совсем ещё юный Гон, отец которого не только избежал смерти, но <span id="dots4">...</span> <span id="more4">вдобавок ещё и стал величайшим Охотником в мире "Хантер х Хантер". В поисках отца Гон сам вступает в ряды Охотников и отправляется в долгое путешествие, сулящее ему встречи как с новыми друзьями, так и со страшными противниками.
+							Манга и оригинальный сериал «Hunter x Hunter» являются признанной классикой аниме, а недавний ремейк способствует привлечению внимания молодого поколения к истории Гона, доказывая, что она не забыта.</span>
+						</p>
+						<button id="btn4" class="button" onclick="readmore4()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/1/11/Hunter_×_Hunter.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="stal" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Стальной Алхимик:В альтернативном мире, где технология уживается рядом с распространённым таинством алхимии, два брата Эдвард и Альфонс мечтают о возвращении своей погибшей матери. Прибегая к алхимии, дети терпят неудачу и забывают о беззаботной жизни: Эдвард теряет руку и ногу, в то время как Альфонс лишается всего тела - его <span id="dots6">...</span> <span id="more6">дух оказывается заключён в доспехах. Это и есть Fullmetal Alchemist. Несколько лет братья странствуют в поисках легендарного философского камня, надеясь исправить страшную ошибку и вернуть утраченное. На пути к цели их ждут встречи с верными товарищами и невероятно сильными врагами, а главное - разгадка тайны давным-давно пропавшего отца…
+							Ремейк первой менее известной экранизации манги «Стальной Алхимик» полюбился многим за превосходное качество визуализации, захватывающий сюжет, обширный и продуманный мир, запоминающихся персонажей и великолепную музыку. «Стальной Алхимик: Братство» - это аниме, относящееся к разряду «пересмотреть обязательно».</span>
+						</p>
+						<button id="btn6" class="button" onclick="readmore6()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/1/18/FullMetalAlchemist.jpg/230px-FullMetalAlchemist.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="master" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Мастера меча онлайн:Представление о видеоиграх в корне изменилось с введением технологии Полного Погружения, повышающей уровень восприятия происходящего в игре до максимального и полностью перекрывающей связь с реальным миром. Данная технология применяется для создания революционной в жанре VRMMORPG игры <span id="dots7">...</span> <span id="more7">под названием «Мастера Меча Онлайн», которая соответствует всем стандартам многопользовательских ролевых игр с одной лишь разницей в том, что игрок ощущает себя своим персонажем. Ажиотаж вокруг игры растёт столь стремительно, что на старте к серверу подключается великое множество человек. Но тут и открывается страшная тайна, скрывавшаяся за многообещающим проектом: выйти из игры невозможно, а при разрыве соединения путём избавления от шлема виртуальной реальности игрок умрёт. Единственным способом спастись создатель игры, придумавший столь хитроумную ловушку, называет полное прохождение своей VRMMORPG. В числе оказавшихся в западне виртуального пространства оказываются Кирито и Асуна, которым предстоит покорить цифровой мир и пройти испытание чувствами.
+							В 2012 году «Sword Art Online» вызвали глубокий интерес у поклонников аниме по всему миру, в связи с этим проект получил перспективы к развитию и радует своих поклонников по сей день.</span>
+						</p>
+						<button id="btn7" class="button" onclick="readmore7()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/2/2b/Sword-art-online-cover-01RU.jpg/250px-Sword-art-online-cover-01RU.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="val" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Волейбол:Вдохновившись примером «Маленького гиганта» из старшей школы Карасуно, юноша по имени Сё Хината решает связать жизнь с волейболом и вступает в волейбольный клуб. Первое поражение на отборочных в средней школе не погасило искру любви к спорту, и Хината поступил в Карасуно, где сразу же подал заявку на участие в<span id="dots5">...</span> <span id="more5"> волейбольном клубе, где когда-то занимался сам «Маленький гигант». Там же Хината встретил Кагеяму - «Короля площадки», гения и эгоиста, которому Сё проиграл в средней школе. Им предстоит научиться работать в команде и стать самым многообещающим дуэтом, что приведёт «бескрылых воронов» Карасуно к победе!</span> 
+						</p>
+						<button id="btn5" class="button" onclick="readmore5()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/2/2a/Shingeki_no_kyojin_book_9_rus.jpg/272px-Shingeki_no_kyojin_book_9_rus.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="gul" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Токийский гуль:Япония, альтернативная реальность. В этом мире параллельно с людьми существует раса гулей - созданий, стоящих выше людей в пищевой цепи, то есть людоедов. Тем не менее, людям удаётся сосуществовать с ними в относительном мире, однако стычки время от времени случаются. Под такую раздачу попадает обычный <span id="dots8">...</span> <span id="more8">школьник Канеки, который становится жертвой могущественной женщины-гуля. Чудом пережив нападение, Канеки узнаёт, что взамен утраченных человеческих органов ему пересадили органы гуля. Кто же он теперь - человек или гуль? Ему предстоит пройти долгий путь самоопределения и найти своё место в мире.
+							Экранизация сделала мангу «Токийский Гуль» ещё более популярной, аниме стало хитом 2014 года, взорвав Интернет и заслужив интерес к приключениям юноши-полугуля огромной публики.</span>
+						</p>
+						<button id="btn8" class="button" onclick="readmore8()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/6/65/Tokyo_Ghoul_volume_1.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="kill" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Убийца акаме:Ночной Рейд - группа отступников, выполняющих диверсии против могущественной Империи, чьи земли простираются на целый континент. Мало кто знает, что хладнокровные убийцы, за чьи головы объявлена награда, на самом деле пусть и не совсем благородные, но всё же храбрые освободители и борцы<span id="dots9">...</span> <span id="more9"> с прогнившей системой, созданной коррумпированным правительством, которому совершенно плевать на бедствующее население Империи, до конца верное своему государю. Простой паренёк Тацуми, выходец из скромной деревушки, оказывается в эпицентре государственного переворота, становясь товарищем каждому в Ночном Рейде.
+							Сюжет «Akame ga Kill!» от и до изобилует неожиданными поворотами, приводящими в итоге к совершенно неординарному финалу. Своей непредсказуемостью и уничтожением устоявшихся шаблонов, а также качественной визуализацией этот хит 2014 года многим пришёлся по вкусу.</span>
+						</p>
+						<button id="btn9" class="button" onclick="readmore9()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/a/a2/Akame_ga_kill_manga_Cover.jpg/230px-Akame_ga_kill_manga_Cover.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="book" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Тетрадь смерти:Жить человеку или не жить определяют боги смерти, рано или поздно внося его имя в особую тетрадь. Одна из таких тетрадей попадает в мир людей на территорию современной Японии. А что случится, если тетрадь бога Death Note окажется в руках человека? Ответ очевиден: он возомнит себя богом. Это и <span id="dots10">...</span> <span id="more10">происходит с Ягами Лайтом - среднестатистическим, но не совсем обычным старшеклассником, мечтающим построить утопию на трупах преступников.
+							«Тетрадь Смерти» обрела невероятную популярность в начале века онлайн, сделав историю противостояния Киры и гениального детектива L классикой детективного жанра и просто культовым аниме.</span>
+						</p>
+						<button id="btn10" class="button" onclick="readmore10()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/a/a9/Death_Note_Manga_Cover_Russian.jpg/230px-Death_Note_Manga_Cover_Russian.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="djo" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Джо Джо:Из поколения в поколение потомки семейства Джостаров наследуют родимое пятно в форме звезды, инициалы ДжоДжо и семейное дело - раз за разом спасать мир. Каждый ДжоДжо - индивидуален и в то же время разделяет точку зрения предшественников о добре и справедливости. От Англии 19 века<span id="dots11">...</span> <span id="more11"> до современной Японии - это поистине невероятное приключение длиною не просто в жизнь героя, а в жизнь целого семейного древа.  Множество практически независимых историй, связанных линией родства главных героев, посвящены головокружительным путешествиям, безумным сражениям и, конечно же, вечным вопросам дружбы и любви.
+							«Невероятные приключения ДжоДжо» - на данный момент ярчайший представитель жанра сейнен и одна из самых культовых японских франшиз. За 30 лет существования манга стала гордостью Японии, а с выходом новой аниме-экранизации культурный феномен ДжоДжо начал притягивать тысячи поклонников с запада. Безумный стиль, безумный шарм, безумные сюжетные повороты и безумные схватки - глоток свежего воздуха для всей аниме-индустрии.</span>
+						</p>
+						<button id="btn11" class="button" onclick="readmore11()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/c/cd/JoJos_Bizarre_Adventure.jpg/230px-JoJos_Bizarre_Adventure.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="my" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Моя геройская академия:В мире «Boku no Hero Academia» каждый желающий может стать супергероем, ведь люди сразу рождаются с необычной силой, называемой Причуда. Каждый, кроме Мидории - паренька, мечтающего стать супергероем, возможно, больше многих других, но по несчастливой <span id="dots12">...</span> <span id="more12">случайности родившегося без Причуды. И, как обычно это бывает в аниме, всё снова решает случай: самый известный и сильный супергерой в мире по прозвищу Всемогущий берётся тренировать Мидорию, после чего отдаёт ему часть своей силы, чтобы он осуществил свою мечту - поступил в академию супергероев.
+							На волне популярности «Ванпанчмена» и супергеройских фильмов «Моя Геройская Академия» пришлась по вкусу многим за счёт красочного исполнения и зрелищных битв, ну и, само собой, персонажей - неутомимых героев… точнее, супергероев современности!</span>
+						</p>
+						<button id="btn12" class="button" onclick="readmore12()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/5/58/Boku_no_Hero_Academia_tom1.jpeg/230px-Boku_no_Hero_Academia_tom1.jpeg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="nice" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Милый во Франксе:В мире будущего у детей, что растут без родителей в изолированных Плантациях, нет другой роли кроме как управлять гигантскими машинами – Франксами – и с их помощью сражаться с Кричащими драконами – чудовищами, угрожающими остаткам человечества, живущим под землёй. Несмотря на то, что детям <span id="dots13">...</span> <span id="more13">вместо имён дают номера, один мальчик решает назваться Хиро и придумывает имена своим друзьям. И когда Хиро уже готовится пилотировать Франкс, он проваливает тест. Положение спасает загадочная девушка с рожками, чей код – 02. Она нарекает Хиро своим любимым и предлагает пилотировать Франкс вместе, что приводит к головокружительным последствиям…
+							Darling in the FranXX «выстрелил», мгновенно став хитом благодаря потрясающей анимации, интригующей завязке и, чего греха таить, фансервису. Пусть эта история не привнесла много нового в жанр, а знаменитая студия Trigger даже отчасти занялась самокопированием, сериал несомненно надолго останется в памяти нынешнего поколения.</span>
+						</p>
+						<button id="btn13" class="button" onclick="readmore13()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/2/2b/Darling_in_the_Franxx_poster.jpg/230px-Darling_in_the_Franxx_poster.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="mc" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Госпожа Кагуя: в любви как на войне:В элитной академии ярче всех сияют две звезды: лучшая ученица Кагуя Шиномия и лучший ученик Миюки Широгане. Своим умом оба прокладывают себе путь в будущее - они стоят друг друга, потому со стороны выглядят потенциальной парой. Более того - у двух отличников даже 	<span id="dots14">...</span><span id="more14">есть взаимные чувства! Вот только ни Кагуя, ни Миюки не могут признаться друг другу. Но не из-за скромности и неуверенности, а из-за стойкого чувства собственного превосходства. Начинаются игры разума: кто кому в итоге признается?</span>
+						</p>
+						<button id="btn14" class="button" onclick="readmore14()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/2/22/Kaguya-sama_Love_is_War.jpg/230px-Kaguya-sama_Love_is_War.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="city" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							город в котором меня нет: Фужинума Сатору — целеустремленный мангака, страдающий от того, что не может выразить себя в своих работах. Именно из-за этого недостатка большинство его работ отклоняются редакторами. Кроме этого, Фуджинума обладает сверхъестественным даром замечать мелочи, что заставляет его помогать людям.
+						</p>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/1/1a/Boku_Dake_ga_Inai_Machi_manga_cover.png/250px-Boku_Dake_ga_Inai_Machi_manga_cover.png">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="Toradora" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Тора Дора: Внешность бывает обманчива, об этом не понаслышке знает Рюдзи - старшеклассник, которого из-за его грозного вида другие ученики обходят стороной. Он быстро становится школьной знаменитостью, жизнь вроде бы налаживается, однако его мечту о романтической <span id="dots15">...</span><span id="more15">юности разрушает бунтарка Тайга - другая школьная знаменитость и единственный человек, способный дерзить Рюдзи. Им предстоит через многое пройти, чтобы разобраться в своих чувствах друг к другу.
+							История «Toradora!» о соперничестве «Тигра» и «Дракона» причислена к классике романтических комедий о школьной жизни обычных японских подростков.</span>
+						</p>
+						<button id="btn15" class="button" onclick="readmore15()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="img-anime" src="https://upload.wikimedia.org/wikipedia/ru/thumb/b/bb/Toradora%21_light_novel_vol.1_cover.jpg/230px-Toradora%21_light_novel_vol.1_cover.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+				<div>
+				<div id="Toradora" class="div-anime">
+					<div class="div-content-anime">
+						<p>
+							Сатана: В одной далекой-далекой галактике местный Князь Тьмы, он же Сатана, потерпел сокрушительное поражение. Когда все было кончено, и лучшие бойцы человечества, возглавляемые героем Эмилией, ворвались в его замок, темный повелитель, собрав остатки сил, открыл магический портал, куда и прыгнул вместе с генералом Алсиэлем.
+						</p>
+						<button id="btn16" class="button" onclick="readmore16()">Подробнее</button>
+					</div>
+					<div class="div-img-anime">
+						<img class="https://ru.wikipedia.org/wiki/Файл:Hataraku_Maō-sama!_light_novel_vol_1.jpg">
+					</div>
+					
+				</div>
+				<div class="content-anime-meant">
+					<div class="anime-meant">
+						<strong>Автор:</strong>	<a class="as" href="https://contacts.google.com/?hl=ru&tab=wC&authuser=0">Масаси Кисимото</a><br>
+						<strong>Книги:</strong>	Наруто. Книга 10. Превосходный ниндзя!, Naruto, Vol. 68, Наруто. Книга 69, Наруто. Книга 71, Наруто. Книга 72<br>
+						<strong>Жанры:</strong> Приключенческая художественная литература, Фэнтези, Боевые искусства<br>
+						<strong>Страны:</strong> Соединенные Штаты Америки, Япония
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+			document.body.onload = function(){
+  setTimeout(function() {
+    var preloader = document.getElementById("page");
+    if (preloader.classList.contains("done") ) {
+        preloader.classList.add("done");
+    }
+  }, 1000);
+ }
+
+//var name;
+//name = prompt("как вас зовут?");
+//alert("с днем"+name+"!");
+function readmore2() {
+    var dots = document.getElementById('dots');
+    var more = document.getElementById('more');
+    var btn = document.getElementById('btn');
+
+    if (dots.style.display === "none") {
+        dots.style.display="inline"
+        btn.innerHTML="Подробнее"
+        more.style.display="none"
+    } 
+    else {
+        dots.style.display="none";
+        btn.innerHTML="Скрыть"
+        more.style.display="inline"
+    }
+}
+function readmore16() {
+    var dots16 = document.getElementById('dots16');
+    var more16 = document.getElementById('more16');
+    var btn16 = document.getElementById('btn16');
+
+    if (dots16.style.display === "none") {
+        dots16.style.display="inline"
+        btn16.innerHTML="Подробнее"
+        more16.style.display="none"
+    } 
+    else {
+        dots16.style.display="none";
+        btn16.innerHTML="Скрыть"
+        more16.style.display="inline"
+    }
+}
+function readmore2() {
+    var dots2 = document.getElementById('dots2');
+    var more2 = document.getElementById('more2');
+    var btn2 = document.getElementById('btn2');
+
+    if (dots2.style.display === "none") {
+        dots2.style.display="inline"
+        btn2.innerHTML="Подробнее"
+        more2.style.display="none"
+    } 
+    else {
+        dots2.style.display="none";
+        btn2.innerHTML="Скрыть"
+        more2.style.display="inline"
+    }
+}
+function readmore3() {
+    var dots3 = document.getElementById('dots3');
+    var more3 = document.getElementById('more3');
+    var btn3 = document.getElementById('btn3');
+
+    if (dots3.style.display === "none") {
+        dots3.style.display="inline"
+        btn3.innerHTML="Подробнее"
+        more3.style.display="none"
+    } else {
+        dots3.style.display="none"
+        btn3.innerHTML="Скрыть"
+        more3.style.display="inline"
+    }
+}
+function readmore4() {
+    var dots4 = document.getElementById('dots4');
+    var more4 = document.getElementById('more4');;
+    var btn4 = document.getElementById('btn4');
+
+    if (dots4.style.display === "none") {
+        dots4.style.display="inline"
+        btn4.style.display="Подробнее"
+        more4.style.display="none"
+    } else {
+        dots4.style.display="none"
+        btn4.style.display="Скрыть"
+        more4.style.display="inline"
+    }
+}
+function readmore5() {
+    var dots5= document.getElementById('dots5');
+    var more5= document.getElementById('more5');
+    var btn5 = document.getElementById('btn5');
+
+    if (dots5.style.display === "none") {
+        dots5.style.display="inline";
+        btn5.innerHTML="Подробнее"
+        more5.style.display="none"
+    } else {
+        dots5.style.display="none";
+        btn5.innerHTML="Скрыть"
+        more5.style.display="inline"
+    }
+}
+function readmore6() {
+    var dots6 = document.getElementById('dots6');
+    var more6 = document.getElementById('more6');
+    var btn6 = document.getElementById('btn6');
+
+    if (dots6.style.display === "none") {
+        dots6.style.display="inline";
+        btn6.innerHTML="Подробнее"
+        more6.style.display="none"
+    } else {
+        dots6.style.display="none";
+        btn6.innerHTML="Скрыть"
+        more6.style.display="inline"
+    }
+}
+function readmore7() {
+    var dots7 = document.getElementById('dots7');
+    var more7 = document.getElementById('more7');
+    var btn7 = document.getElementById('btn7');
+
+    if (dots7.style.display === "none") {
+        dots7.style.display="inline";
+        btn7.innerHTML="Подробнее"
+        more7.style.display="none"
+    } else {
+        dots7.style.display="none";
+        btn7.innerHTML="Скрыть"
+        more7.style.display="inline"
+    }
+}
+function readmore8() {
+    var dots8 = document.getElementById('dots8');
+    var more8 = document.getElementById('more8');;
+    var btn8 = document.getElementById('btn8');
+
+    if (dots8.style.display === "none") {
+        dots8.style.display="inline";
+        btn8.innerHTML="Подробнее"
+        more8.style.display="none"
+    } else {
+        dots8.style.display="none";
+        btn8.innerHTML="Скрыть"
+        more8.style.display="inline"
+    }
+}
+function readmore9() {
+    var dots9 = document.getElementById('dots9');
+    var more9 = document.getElementById('more9');
+    var btn9 = document.getElementById('btn9');
+
+    if (dots9.style.display === "none") {
+        dots9.style.display="inline";
+        btn9.innerHTML="Подробнее"
+        more9.style.display="none"
+    } else {
+        dots9.style.display="none";
+        btn9.innerHTML="Скрыть"
+        more9.style.display="inline"
+    }
+}
+function readmore10() {
+    var dots6 = document.getElementById('dots10')
+    var more6 = document.getElementById('more10')
+    var btn6 = document.getElementById('btn10')
+
+    if (dots10.style.display === "none") {
+        dots10.style.display="inline";
+        btn10.innerHTML="Подробнее"
+        more10.style.display="none"
+    } else {
+        dots10.style.display="none";
+        btn10.innerHTML="Скрыть"
+        more10.style.display="inline"
+    }
+}
+function readmore11() {
+    var dots11 = document.getElementById('dots11')
+    var more11 = document.getElementById('more11')
+    var btn11 = document.getElementById('btn11')
+
+    if (dots11.style.display === "none") {
+        dots11.style.display="inline";
+        btn11.innerHTML="Подробнее"
+        more11.style.display="none"
+    } else {
+        dots11.style.display="none";
+        btn11.innerHTML="Скрыть"
+        more11.style.display="inline"
+    }
+}
+function readmore12() {
+    var dots12 = document.getElementById('dots12')
+    var more12 = document.getElementById('more12')
+    var btn12 = document.getElementById('btn12')
+
+    if (dots12.style.display === "none") {
+        dots12.style.display="inline";
+        btn12.innerHTML="Подробнее"
+        more12.style.display="none"
+    } else {
+        dots12.style.display="none";
+        btn12.innerHTML="Скрыть"
+        more12.style.display="inline"
+    }
+}
+function readmore13() {
+    var dots13 = document.getElementById('dots13')
+    var more13= document.getElementById('more13')
+    var btn13 = document.getElementById('btn13')
+
+    if (dots13.style.display === "none") {
+        dots13.style.display="inline";
+        btn13.innerHTML="Подробнее"
+        more13.style.display="none"
+    } else {
+        dots13.style.display="none";
+        btn13.innerHTML="Скрыть"
+        more13.style.display="inline"
+    }
+}
+function readmore14() {
+    var dots14 = document.getElementById('dots14')
+    var more14= document.getElementById('more14')
+    var btn14 = document.getElementById('btn14')
+
+    if (dots14.style.display === "none") {
+        dots14.style.display="inline";
+        btn14.innerHTML="Подробнее"
+        more14.style.display="none"
+    } else {
+        dots14.style.display="none";
+        btn14.innerHTML="Скрыть"
+        more14.style.display="inline"
+    }
+}
+function readmore15() {
+    var dots15 = document.getElementById('dots15')
+    var more15= document.getElementById('more15')
+    var btn15 = document.getElementById('btn15')
+
+    if (dots15.style.display === "none") {
+        dots15.style.display="inline";
+        btn15.innerHTML="Подробнее"
+        more15.style.display="none"
+    } else {
+        dots15.style.display="none";
+        btn15.innerHTML="Скрыть"
+        more15.style.display="inline"
+    }
+}
+function comment(button) {
+    prompt("пишите свой коментарий");
+}
+
+			</script>
+	</body>
+</html>
