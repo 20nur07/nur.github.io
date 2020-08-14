@@ -1,0 +1,16 @@
+.book{
+	background-color: rgb(4, 184, 18);
+	color:#ffffff;
+	border-radius:200px; 
+	border:3px solid #ff471a;
+	font-size: 62px;
+	padding-right: 20px;
+	padding-left: 20px;
+	box-shadow:7px 7px 5px black;
+	text-decoration: none;
+}
+body{
+	background-color: rgb(199 90 252);
+	justify-content: center;
+	display: grid;
+}
